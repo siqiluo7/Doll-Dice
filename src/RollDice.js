@@ -8,7 +8,8 @@ class RollDice extends Component {
         super(props);
         this.state = {
             dice1: 1,
-            dice2: 1
+            dice2: 1,
+            rolling: false
         }
         this.clickHandler = this.clickHandler.bind(this);
     }
@@ -25,7 +26,11 @@ class RollDice extends Component {
     }
 
     clickHandler() {
+        this.setState({rolling:true});
         this.Roll();
+        setTimeout(()=>(this.setState({rolling:false})),1000);
+      
+        
     }
 
 
@@ -39,7 +44,7 @@ class RollDice extends Component {
                     <div className="Die"> <Die num={this.state.dice2} /></div>
                 </div>
 
-                <button className="rollButton" onClick={this.clickHandler}>Click to Roll!!!!</button>
+                <button className="rollButton" onClick={this.clickHandler}>{this.state.rolling?"Rolling":"Click to Roll!!!!"}</button>
             </div>
 
         );

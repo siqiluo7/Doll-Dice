@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Die.scss'
 
 let numToWord=['one','two','three','four','five','six'];
 
