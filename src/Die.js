@@ -14,6 +14,7 @@ class Die extends Component {
     render() {
         
         let  diceClass='fas fa-7x fa-dice-'+numToWord[this.props.num];
+        diceClass=(this.props.rolling?diceClass+' shaking':diceClass);
         console.log(diceClass);
         return (
             <i className={diceClass}></i>

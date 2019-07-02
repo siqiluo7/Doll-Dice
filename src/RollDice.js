@@ -40,11 +40,11 @@ class RollDice extends Component {
         return (
             <div className="playPanel">
                 <div className="dicePanel">
-                    <div className="Die"> <Die num={this.state.dice1} /></div>
-                    <div className="Die"> <Die num={this.state.dice2} /></div>
+                    <div className="Die"> <Die num={this.state.dice1} rolling={this.state.rolling} /></div>
+                    <div className="Die"> <Die num={this.state.dice2} rolling={this.state.rolling} /></div>
                 </div>
 
-                <button className="rollButton" onClick={this.clickHandler}>{this.state.rolling?"Rolling":"Click to Roll!!!!"}</button>
+                <button className="rollButton" disabled={this.state.rolling} onClick={this.clickHandler}>{this.state.rolling?"Rolling":"Click to Roll!!!!"}</button>
             </div>
 
         );

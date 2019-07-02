@@ -1,0 +1,38 @@
+.GamePanel{
+    display: flex;
+    flex-direction: column;
+    border: 1rem;
+    border-color: gray;
+    border-radius: 10px;
+    background-color: burlywood;
+    justify-content: center;
+    align-content: center;
+}
+
+.ResultPanel{
+
+display: flex;
+justify-content:center;
+flex-direction: row;
+
+
+}
+button{
+    align-self: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    width:20%;
+    color:gray;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 1rem 2rem 1rem 2rem;
+
+    &:hover{
+       transform: translate(0, 1px);
+       -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3)
+    }
+
+}
